@@ -6,6 +6,7 @@
 ![](https://img.shields.io/github/languages/top/ivankatliarchuk/ergodox-ez?color=green&logo=c&logoColor=blue)
 ![](https://img.shields.io/github/commit-activity/m/ivankatliarchuk/ergodox-ez)
 ![](https://img.shields.io/github/last-commit/ivankatliarchuk/ergodox-ez)
+![](https://img.shields.io/github/contributors/ivankatliarchuk/ergodox-ez)
 
 ![keyboard](assets/keyboard-2020.jpg)
 

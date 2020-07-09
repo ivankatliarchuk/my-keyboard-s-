@@ -50,9 +50,7 @@ jobs:
         shell: 'bash {0}'
         run: |
 
-          echo "#define CURRENT_VERSION    \"${{ steps.tag.outputs.tag }}\"" > ergodox/${KEYMAP}.h
-
-          cat "ergodox/${KEYMAP}.h"
+          echo "#define CURRENT_VERSION    \"${{ steps.tag.outputs.tag }}\"" > ergodox/${KEYMAP}/dynamic.h
 
           cp -av ergodox/* /qmk_firmware/keyboards/${KEYBOARD}/keymaps
 
