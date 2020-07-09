@@ -38,10 +38,21 @@ jobs:
           echo "::set-output name=tag_hash::${GITHUB_SHA::8}"
           echo "::set-output name=changelog::$(git log -1 --pretty=format:"%s")"
 
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.22.0
+        id: tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+
       - name: Run qmk
         id: run_qmk
         shell: 'bash {0}'
         run: |
+
+          echo "#define CURRENT_VERSION    \"${{ steps.tag.outputs.tag }}\"" > ergodox/${{ env.KEYMAP }}.h
+
+          cat ergodox/${{ env.KEYMAP }}.h
 
           cp -av ergodox/* /qmk_firmware/keyboards/${KEYBOARD}/keymaps
 
@@ -70,7 +81,7 @@ jobs:
           body: |
             Changes in this Release ${{ steps.register.outputs.release_timestamp }}
             - ${{ steps.register.outputs.changelog }}
-            - ${KEYBOARD}:${KEYMAP}
+            - ${{ env.KEYBOARD }}:${{ env.$KEYMAP }}
 
       - name: upload release asset
         id: upload-release-asset
@@ -80,7 +91,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /qmk_firmware/.build/ergodox_ez_rev1.hex
+          asset_path: ${{ env.QMK_OUTPUT }}
           asset_name: ergodox-ez-rev1-${{ steps.tag.outputs.tag }}.hex
           asset_content_type: text/plain
 
