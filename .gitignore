@@ -1,5 +1,6 @@
 out/*
 !out/.keep
+.github/workflows/info.yml
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos
