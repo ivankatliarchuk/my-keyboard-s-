@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  KEYBOARD: ergodox
+  KEYBOARD: ergodox_ez
   KEYMAP: rev1
   KEYBOARD_PATH: /qmk_firmware/keyboards
 
@@ -29,7 +29,10 @@ jobs:
       - name: Run qmk
         shell: 'bash {0}'
         run: |
-          pwd
-          ls -la
-          echo "docker"
-          ls -la /qmk_firmware
+
+          cp -av ergodox/* /qmk_firmware/keyboards/${KEYBOARD}/keymaps
+
+          make "${KEYBOARD}:${KEYMAP:+:$KEYMAP}"
+
+          echo "created"
+
