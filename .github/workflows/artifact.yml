@@ -34,7 +34,7 @@ jobs:
 
           ls -la /qmk_firmware/keyboards/${KEYBOARD}/keymaps
 
-          make "${KEYBOARD}:${KEYMAP}"
+          make
 
           echo "created"
 
