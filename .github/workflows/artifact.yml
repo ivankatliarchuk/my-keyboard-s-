@@ -80,7 +80,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: $QMK_OUTPUT
+          asset_path: /qmk_firmware/.build/ergodox_ez_rev1.hex
           asset_name: ergodox-ez-rev1-${{ steps.tag.outputs.tag }}.hex
           asset_content_type: text/plain
 
