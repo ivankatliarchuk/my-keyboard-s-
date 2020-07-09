@@ -6,12 +6,12 @@ on:
       - master
 
 env:
-  KEYBOARD: k8s-tools
-  KEYMAP: cloudkats
-  DOCKER_IMAGE: qmkfm/base_container
+  KEYBOARD: ergodox
+  KEYMAP: rev1
+  KEYBOARD_PATH: /qmk_firmware/keyboards
 
 jobs:
-  test:
+  artifact:
     runs-on: ubuntu-latest
     container: qmkfm/base_container
 
@@ -31,3 +31,5 @@ jobs:
         run: |
           pwd
           ls -la
+          echo "docker"
+          ls -la /qmk_firmware
