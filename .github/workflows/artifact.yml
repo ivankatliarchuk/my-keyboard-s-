@@ -53,7 +53,7 @@ jobs:
           echo "created"
 
       - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.22.2
+        uses: anothrNick/github-tag-action@1.22.0
         id: tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
