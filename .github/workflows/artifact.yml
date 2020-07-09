@@ -13,6 +13,7 @@ env:
   QMK_OUTPUT: /qmk_firmware/.build/ergodox_ez_rev1.hex
   DEFAULT_BUMP: patch
   INITIAL_VERSION: 0.1.0
+  GIT_URL: https://github.com/ivankatliarchuk/ergodox-ez
 
 jobs:
   artifact:
@@ -51,7 +52,9 @@ jobs:
         run: |
 
           echo "#define CURRENT_VERSION    \"${{ steps.tag.outputs.tag }}\"" > ergodox/${KEYMAP}/dynamic.h
-
+          echo "#define RELEASE_URL    \"$GIT_URL\"" > ergodox/${KEYMAP}/dynamic.h
+          cat ergodox/${KEYMAP}/dynamic.h
+          
           cp -av ergodox/* /qmk_firmware/keyboards/${KEYBOARD}/keymaps
 
           make -C ${QMK_PATH}
