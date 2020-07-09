@@ -32,6 +32,7 @@ jobs:
 
       - name: define version
         id: register
+        shell: 'bash {0}'
         run: |
           echo "::set-output name=release_timestamp::$(date +%Y-%m-%d_%H.%m)"
           echo "::set-output name=tag_hash::${GITHUB_SHA::8}"
