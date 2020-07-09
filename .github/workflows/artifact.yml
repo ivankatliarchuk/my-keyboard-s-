@@ -32,7 +32,9 @@ jobs:
 
           cp -av ergodox/* /qmk_firmware/keyboards/${KEYBOARD}/keymaps
 
-          make "${KEYBOARD}:${KEYMAP:+:$KEYMAP}"
+          ls -la /qmk_firmware/keyboards/${KEYBOARD}/keymaps
+
+          make "${KEYBOARD}:${KEYMAP}"
 
           echo "created"
 
