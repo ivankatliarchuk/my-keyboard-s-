@@ -51,15 +51,18 @@ jobs:
         shell: 'bash {0}'
         run: |
 
-          echo "#define CURRENT_VERSION    \"${{ steps.tag.outputs.tag }}\"" > ergodox/${KEYMAP}/dynamic.h
-          echo "#define RELEASE_URL    \"$GIT_URL\"" > ergodox/${KEYMAP}/dynamic.h
+          rm ergodox/${KEYMAP}/dynamic.h
+
+          cat <<-EOF > ergodox/${KEYMAP}/dynamic.h
+          #define CURRENT_VERSION    \"${{ steps.tag.outputs.tag }}\"
+          #define RELEASE_URL    \"$GIT_URL\"
+          EOF
+
           cat ergodox/${KEYMAP}/dynamic.h
-          
+
           cp -av ergodox/* /qmk_firmware/keyboards/${KEYBOARD}/keymaps
 
           make -C ${QMK_PATH}
-
-          echo "created"
 
       - name: create release
         id: create_release
