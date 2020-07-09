@@ -13,7 +13,7 @@ env:
 jobs:
   artifact:
     runs-on: ubuntu-latest
-    container: qmkfm/base_container
+    container: qmkfm/qmk_firmware
 
     steps:
       - uses: actions/checkout@v2
