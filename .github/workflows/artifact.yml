@@ -9,6 +9,7 @@ env:
   KEYBOARD: ergodox_ez
   KEYMAP: rev1
   KEYBOARD_PATH: /qmk_firmware/keyboards
+  QMK_PATH: /qmk_firmware
 
 jobs:
   artifact:
@@ -34,7 +35,7 @@ jobs:
 
           ls -la /qmk_firmware/keyboards/${KEYBOARD}/keymaps
 
-          make
+          make -C ${QMK_PATH}
 
           echo "created"
 
