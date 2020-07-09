@@ -1,0 +1,33 @@
+name: create
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  KEYBOARD: k8s-tools
+  KEYMAP: cloudkats
+  DOCKER_IMAGE: qmkfm/base_container
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: qmkfm/base_container
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Print info
+        run: |
+          git rev-parse --short HEAD
+          echo ${{ github.event.pull_request.base.sha }}
+          git diff --name-only ${{ github.event.pull_request.base.sha }}...
+
+      - name: Run qmk
+        shell: 'bash {0}'
+        run: |
+          pwd
+          ls -la
