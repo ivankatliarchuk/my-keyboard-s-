@@ -40,6 +40,11 @@
 - [Wally](https://ergodox-ez.com/pages/wally)
 - [Teensy](https://www.pjrc.com/teensy/teensy31.html)
 
+## Similar Keyboards
+
+- [Dactyl](https://github.com/adereth/dactyl-keyboard)
+- [Advantage2](https://kinesis-ergo.com/shop/advantage2/)
+
 ## TODO
 
 - [] Remove IDEA layer
