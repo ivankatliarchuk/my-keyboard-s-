@@ -6,6 +6,7 @@ on:
       - master
     paths:
     - 'ergodox/rev1/**'
+    - '.github/workflows/rev1.yml'
 
 env:
   KEYBOARD: ergodox_ez
