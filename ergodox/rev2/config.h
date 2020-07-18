@@ -8,4 +8,4 @@
 
 #define PERMISSIVE_HOLD
 
-#define FIRMWARE_VERSION u8"lAN7e/vJ4OR"
+#define FIRMWARE_VERSION u8"lAN7e/jaalw"

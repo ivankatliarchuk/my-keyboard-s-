@@ -1,7 +1,5 @@
 #include QMK_KEYBOARD_H
-
 #include "firmware.h"
-
 #include "version.h"
 #include "keymap_german.h"
 #include "keymap_nordic.h"
@@ -56,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [1] = LAYOUT_ergodox_pretty(
     ST_MACRO_0,     KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          WEBUSB_PAIR,                                    KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
-    LGUI(LSFT(KC_P)),KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_1,     KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,
+    LGUI(LSFT(KC_P)),KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        KC_MAC_UNDO,                                    KC_MAC_UNDO,    ST_MACRO_1,     KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,
     LGUI(LSFT(KC_F)),KC_HASH,        KC_DLR,         KC_LPRN,        KC_RPRN,        KC_GRAVE,                                                                       ST_MACRO_2,     KC_4,           KC_5,           KC_6,           KC_PLUS,        KC_TRANSPARENT,
-    LGUI(KC_S),     KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_AMPR,        KC_1,           KC_2,           KC_3,           KC_BSLASH,      KC_TRANSPARENT,
+    LGUI(LSFT(KC_S)),KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_AMPR,        KC_1,           KC_2,           KC_3,           KC_BSLASH,      KC_TRANSPARENT,
     TO(0),          KC_EQUAL,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_CIRC,        KC_DOT,         KC_0,           KC_EQUAL,       KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
@@ -102,17 +100,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_0:
     if (record->event.pressed) {
       SEND_STRING(FIRMWARE SS_DELAY(50) SS_TAP(X_ENTER));
+
     }
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_BSLASH)) SS_DELAY(1) SS_LSFT(SS_TAP(X_BSLASH)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_BSLASH)) SS_DELAY(100) SS_LSFT(SS_TAP(X_BSLASH)));
 
     }
     break;
     case ST_MACRO_2:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_7)) SS_DELAY(1) SS_LSFT(SS_TAP(X_7)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_7)) SS_DELAY(100) SS_LSFT(SS_TAP(X_7)));
 
     }
     break;

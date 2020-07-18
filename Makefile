@@ -9,7 +9,8 @@ help:
 
 build: ## Build layot
 	@rm -rf out/*
-	docker run \
+	@printf "revision: $(KEYMAP)\n"
+	@docker run \
 		--env KEYBOARD=$(KEYBOARD) \
 		--env KEYMAP=$(KEYMAP) \
 		-v $(shell pwd)/out:/qmk_firmware/.build \
