@@ -8,4 +8,4 @@
 #define FIRMWARE "keymap: " QMK_KEYBOARD "/" QMK_KEYMAP " > firmware: " FIRMWARE_VERSION " @ release: "  RELEASE_URL "/releases/tag/" CURRENT_VERSION
 
 // #include "firmware.h"
-// SEND_STRING(FIRMWARE SS_DELAY(50) SS_TAP(X_ENTER));
+// SEND_STRING(FIRMWARE SS_DELAY(DELAY) SS_TAP(X_ENTER));
