@@ -3,4 +3,9 @@
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
 #define ORYX_CONFIGURATOR
-#define FIRMWARE_VERSION u8"dZx7G/7BPrY"
+#undef DEBOUNCE
+#define DEBOUNCE 40
+
+#define PERMISSIVE_HOLD
+
+#define FIRMWARE_VERSION u8"lAN7e/vJ4OR"
