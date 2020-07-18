@@ -5,7 +5,7 @@
 
 #define ORYX_CONFIGURATOR
 #undef DEBOUNCE
-#define DEBOUNCE 15
+#define DEBOUNCE 45
 
 #define PERMISSIVE_HOLD
 

@@ -3,7 +3,7 @@
 #include "config.h"
 #include "dynamic.h"
 
-#define DELAY 45
+#define DELAY 1
 
 #define FIRMWARE "keymap: " QMK_KEYBOARD "/" QMK_KEYMAP " > firmware: " FIRMWARE_VERSION " @ release: "  RELEASE_URL "/releases/tag/" CURRENT_VERSION
 
