@@ -1,6 +1,6 @@
 # Ergodox
 
-(Oryx Lyaout Example)(https://configure.ergodox-ez.com/ergodox-ez/layouts/lAN7e/latest)
+[Oryx Lyaout Example](https://configure.ergodox-ez.com/ergodox-ez/layouts/lAN7e/latest)
 
 [![](https://github.com/ivankatliarchuk/ergodox-ez/workflows/rev1/badge.svg)](https://github.com/ivankatliarchuk/ergodox-ez/actions?query=workflow%3Arev1)
 [![](https://github.com/ivankatliarchuk/ergodox-ez/workflows/rev2/badge.svg)](https://github.com/ivankatliarchuk/ergodox-ez/actions?query=workflow%3Arev2)
