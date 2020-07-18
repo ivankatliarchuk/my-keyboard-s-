@@ -6,6 +6,7 @@ on:
       - master
     paths:
     - 'ergodox/rev2/**'
+    - '.github/workflows/rev2.yml'
 
 env:
   KEYBOARD: ergodox_ez
@@ -91,6 +92,6 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ env.QMK_OUTPUT }}
-          asset_name: ergodox-ez-rev1-${{ steps.tag.outputs.tag }}.hex
+          asset_name: ergodox-ez-rev2-${{ steps.tag.outputs.tag }}.hex
           asset_content_type: text/plain
 
