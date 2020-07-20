@@ -15,4 +15,4 @@
 #define NO_AUTO_SHIFT_SPECIAL
 #define NO_AUTO_SHIFT_ALPHA
 
-#define FIRMWARE_VERSION u8"lAN7e/jaalw"
+#define FIRMWARE_VERSION u8"lAN7e/yB9Kr"
