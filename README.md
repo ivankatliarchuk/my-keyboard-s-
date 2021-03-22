@@ -1,6 +1,6 @@
 # Ergodox
 
-[My public Oryx Lyaout Example](https://configure.ergodox-ez.com/ergodox-ez/layouts/lAN7e/latest)
+[My public Moonlander Lyaout Example](https://configure.ergodox-ez.com/ergodox-ez/layouts/lAN7e/latest)
 
 [![](https://github.com/ivankatliarchuk/ergodox-ez/workflows/rev1/badge.svg)](https://github.com/ivankatliarchuk/ergodox-ez/actions?query=workflow%3Arev1)
 [![](https://github.com/ivankatliarchuk/ergodox-ez/workflows/rev2/badge.svg)](https://github.com/ivankatliarchuk/ergodox-ez/actions?query=workflow%3Arev2)
@@ -23,13 +23,12 @@
 - [Macros](https://docs.qmk.fm/#/feature_macros)
 - [Layers](https://docs.qmk.fm/#/feature_layers)
 - [Default Moonlander](https://configure.ergodox-ez.com/moonlander/layouts/default/latest/0)
-- [My Layouts]*https://configure.ergodox-ez.com/my_layouts)
-https://www.zsa.io/101/
-https://github.com/zsa/qmk_firmware/tree/firmware19/keyboards/moonlander
+
 
 # Supported Keyboards
 
-* [ErgoDox EZ](/ergodox/)
+* [ErgoDox EZ](https://ergodox-ez.com/)
+* [Moonlander EZ](https://www.zsa.io/moonlander)
 
 ## Key References
 
