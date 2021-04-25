@@ -84,3 +84,7 @@
 - [Uplift](https://www.upliftdesk.com/)
 - [Autonomous](https://www.autonomous.ai/smart-office)
 - [Fully](www.fully.com)
+
+## Keyaboards
+
+- [list of awesome keyboards](https://github.com/diimdeep/awesome-split-keyboards)
