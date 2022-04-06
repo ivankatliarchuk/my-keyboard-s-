@@ -1,7 +1,5 @@
 # Ergodox
 
-[My public Moonlander Lyaout Example](https://configure.ergodox-ez.com/ergodox-ez/layouts/lAN7e/latest)
-
 [![](https://github.com/ivankatliarchuk/ergodox-ez/workflows/rev1/badge.svg)](https://github.com/ivankatliarchuk/ergodox-ez/actions?query=workflow%3Arev1)
 [![](https://github.com/ivankatliarchuk/ergodox-ez/workflows/rev2/badge.svg)](https://github.com/ivankatliarchuk/ergodox-ez/actions?query=workflow%3Arev2)
 
@@ -14,6 +12,12 @@
 [![GitHub forks](https://img.shields.io/github/forks/ivankatliarchuk/ergodox-ez.svg?style=social&label=Fork)](https://github.com/ivankatliarchuk/ergodox-ez)
 
 ![keyboard](assets/keyboard-2020.jpg)
+
+## Moonlander
+
+- [Default layout](https://configure.zsa.io/moonlander/layouts/default/latest/0)
+- [My Lyaout](https://configure.zsa.io/moonlander/layouts/YWgdw/latest/0)
+- [Layouts](./assets/moonlander)
 
 ## References
 
