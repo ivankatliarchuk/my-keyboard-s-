@@ -15,3 +15,7 @@ Good luck on your journey! And remember, if you get stuck, you can always get ba
 
 
 make moonlander:rev1
+
+## Troubleshooting
+
+- [Idle-hang after ~1 minute, requires USB replug](./TROUBLESHOOTING.md)
